@@ -12,13 +12,13 @@ app.use(cors());
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// --- CONEXIÓN A LA BASE DE DATOS ---
+// --- CONEXIÓN A LA BASE DE DATOS actualizada 31 marzo 2026---
 const conexion = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Stiven",
-    database: "conecta_emprendedores"
+    host: process.env.MYSQLHOST || "localhost",
+    user: process.env.MYSQLUSER || "root",
+    password: process.env.MYSQLPASSWORD || "Stiven",
+    database: process.env.MYSQLDATABASE || "conecta_emprendedores",
+    port: process.env.MYSQLPORT || 3306
 });
 
 conexion.connect(function(error){
@@ -155,7 +155,8 @@ app.get('/api/perfil/:id', (req, res) => {
     });
 });
 
-// --- INICIO DEL SERVIDOR ---
-app.listen(3000, () => {
-    console.log('🚀 Servidor API corriendo en http://localhost:3000');
+// --- AHORA (Listo para la nube) ---
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`🚀 Servidor API corriendo en el puerto ${PORT}`);
 });
