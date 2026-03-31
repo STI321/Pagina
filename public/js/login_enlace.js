@@ -42,7 +42,7 @@ formulario.addEventListener('submit', async (e) => {
 
             // 3. Mostramos mensaje y redirigimos
             alert(result.mensaje);
-            window.location.href = 'home.html';
+            window.location.href = 'main.html';
 
         } else {
             alert("Error: " + (result.error || "Credenciales incorrectas"));

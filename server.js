@@ -10,14 +10,14 @@ app.use(express.json());
 app.use(cors());
 
 // Servir archivos estáticos
-app.use(express.static(path.join(__dirname, 'pagina en linea')));
-app.use('/html', express.static(path.join(__dirname, 'pagina en linea/html')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // --- CONEXIÓN A LA BASE DE DATOS ---
 const conexion = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Brayan",
+    password: "Stiven",
     database: "conecta_emprendedores"
 });
 

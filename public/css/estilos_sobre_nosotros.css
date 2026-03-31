@@ -1,11 +1,8 @@
-/* Estilos Generales */
+/* Estilos General */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-    background-image: url("../img/oficina_verde.png");
-  background-repeat:space;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #A7ECA4;
 }
 
 /* Encabezado */
@@ -52,6 +49,7 @@ body {
   color: #06a500;
 }
 
+
 /* Botones */
 .Botones {
   display: flex;
@@ -59,6 +57,7 @@ body {
 }
 
 .btn {
+text-decoration: none;
   background-color: white;
   border: none;
   padding: 8px 15px;
@@ -68,128 +67,117 @@ body {
 }
 
 .btn2 {
-  text-decoration: none;
-  color: black;
+text-decoration: none;
+color: black;
+}
+.btn:hover {
+  background-color: #06a500; /* verde más oscuro al pasar el mouse */
 }
 
-.btn:hover {
-  background-color: #06a500;
-}
 
 /* HERO */
-.hero-emprendedores {
+.hero-sobre {
   position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Evita scrolls accidentales */
 }
 
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/img/fondo3.webp") no-repeat center/cover;
+  filter: brightness(60%);
+  z-index: -1;
+}
+
+/* TARJETA PRINCIPAL */
 .contenido-superpuesto {
-  background-color: rgba(255, 255, 255, 0.747);
-  padding: 50px 60px;
-  border-radius: 30px;
+  background: rgba(255,255,255,0.92);
+  padding: 50px 70px;
+  border-radius: 25px;
+  max-width: 1000px;
   text-align: center;
-  max-width: 1100px;
-  box-shadow: 0 10px 35px rgba(107, 102, 102, 0.377);
+  color: #1d2b0f;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  backdrop-filter: blur(5px);
   animation: fadeIn 1.2s ease-in-out;
 }
 
-h2 {
+/* TITULOS */
+.sobre-nosotros h2 {
   font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1c2600;
+}
+
+.sobre-nosotros h3 {
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #1a2b09;
-}
-
-h3 {
-  font-size: 25px;
   color: #253900;
+  border-left: 4px solid #06a500;
+  padding-left: 10px;
 }
 
+/* PARRAFOS */
 .intro {
   font-size: 20px;
-  margin: 0 auto 40px;
+  max-width: 850px;
+  margin: auto auto 35px;
   line-height: 1.6;
-  max-width: 900px;
 }
 
-/* Títulos de sesión */
-.titulo-sesion {
-  text-align: left;
-  font-size: 26px;
-  color: #1c2600;
-  margin: 45px 0 15px;
-  font-weight: bold;
-  padding-left: 10px;
-  border-left: 5px solid #06a500;
-}
-
-/* Tarjetas */
+/* CONTENEDOR DE TARJETAS */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
+/* TARJETAS */
 .card {
-  background: rgb(255, 254, 254);
+  background: #ffffff;
   padding: 25px;
-  text-align: left;
   border-radius: 20px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.card h3 {
-  border-left: 4px solid #06a500;
-  padding-left: 10px;
-  font-size: 22px;
-}
-
+/* LISTA */
 .card ul {
   list-style: none;
   padding: 0;
 }
 
 .card ul li {
-  margin-bottom: 10px;
   font-size: 18px;
-  padding-left: 22px;
+  margin-bottom: 10px;
+  padding-left: 28px;
   position: relative;
 }
 
 .card ul li::before {
   content: "✔";
   position: absolute;
-  color: #06a500;
   left: 0;
-}
-
-/* Botón CTA */
-.btn-registro {
-  display: inline-block;
-  margin-top: 40px;
-  background-color: #06a500;
-  color: white;
-  text-decoration: none;
-  padding: 15px 35px;
-  font-size: 20px;
-  border-radius: 35px;
   font-weight: bold;
-  transition: 0.3s;
+  color: #06a500;
 }
 
-.btn-registro:hover {
-  background-color: #048d00;
-}
-
-/* Animación */
+/* ANIMACIÓN */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 850px) {
   .cards-container {
     grid-template-columns: 1fr;
@@ -199,7 +187,7 @@ h3 {
     padding: 35px 25px;
   }
 
-  h2 {
-    font-size: 32px;
+  .sobre-nosotros h2 {
+    font-size: 30px;
   }
 }

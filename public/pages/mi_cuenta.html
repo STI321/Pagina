@@ -25,11 +25,11 @@
         </div>
 
         <ul>
-            <li><a href="home.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-            <li><a href="proyectos.html"><i class="fa-solid fa-folder"></i> Proyectos</a></li>
-            <li><a href="inversores.html"><i class="fa-solid fa-hand-holding-dollar"></i> Inversionistas</a></li>
-            <li><a href="emprendedores.html"><i class="fa-solid fa-rocket"></i> Emprendedores</a></li>
-            <li><a href="Biblioteca.html"><i class="fa-solid fa-book"></i> Biblioteca</a></li>
+            <li><a href="main.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href=""><i class="fa-solid fa-folder"></i> Proyectos</a></li>
+            <li><a href=""><i class="fa-solid fa-hand-holding-dollar"></i> Inversionistas</a></li>
+            <li><a href=""><i class="fa-solid fa-rocket"></i> Emprendedores</a></li>
+            <li><a href="biblioteca.html"><i class="fa-solid fa-book"></i> Biblioteca</a></li>
             <li class="active"><a href="mi_cuenta.html"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
         </ul>
 
@@ -98,7 +98,7 @@
 
                 <div class="form-grupo">
                     <label>Nueva Contraseña</label>
-                    <input type="password" id="password" placeholder="Mínimo 6 caracteres">
+                    <input type="password" name="password" id="password" placeholder="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$" title="Mínimo 10 caracteres, mayúscula, minúscula, número y carácter especial" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$" required>
                 </div>
 
                 <button type="button"
@@ -116,6 +116,6 @@
     </main>
 </div>
 
-<script src="../javascript/perfil.js"></script>
+<script src="../js/perfil.js"></script>
 </body>
 </html>

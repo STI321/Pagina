@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // 1. Guardamos el nombre en la memoria del navegador
                     localStorage.setItem("usuarioNombre", resultado.nombre);
                     alert("¡Bienvenido a Conecta Emprendedores!");
-                    window.location.href = "home.html";
+                    window.location.href = "main.html";
                 } else {
                     alert("Error: " + (resultado.mensaje || resultado.error));
                 }
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {
             localStorage.removeItem("usuarioNombre");
-            window.location.href = "login.html";
+            window.location.href = "../pages/login.html";
         });
     }
 });

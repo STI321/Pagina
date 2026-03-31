@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de usuario - Conecta Emprendedores</title>
     <link rel="stylesheet" href="../css/EstilosRegistro.css">
-    <link rel="icon" href="../img/logo2.png" type="image/x-icon">
+    <link rel="icon" href="../assets/img/logo2.png" type="image/x-icon">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
       <div class="menu" onclick="toggleMenu()">
         <span class="menu-icon">☰</span> Menu
       </div>
-      <img src="../img/foto 2.png" alt="Personas trabajando" class="bg-img">
+      <img src="../assets/img/foto 2.png" alt="Personas trabajando" class="bg-img">
 
       <!-- Sidebar oculto -->
       <div id="sidebar" class="sidebar">
@@ -24,7 +24,7 @@
           <li><a href="Inicio.html">Inicio</a></li>
           <li><a href="emprendedores.html">Emprendedores</a></li>
           <li><a href="inversores.html">Inversores</a></li>
-          <li><a href="Recursos.html">Recursos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
           <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -32,23 +32,23 @@
 
       <!-- Íconos sociales -->
       <div class="social-icons">
-        <a href="#"><img src="../img/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="../img/x.png" alt="X"></a>
-        <a href="#"><img src="../img/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="../assets/img/x.png" alt="X"></a>
+        <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
       </div>
     </div>
 
     <!-- Columna derecha -->
     <div class="right-side">
       <div class="login-box">
-        <img src="../img/logo2.png" alt="Logo Conecta Emprendedores" class="logo">
+        <img src="../assets/img/logo2.png" alt="Logo Conecta Emprendedores" class="logo">
 
         <h2>Registro de Usuario</h2>
         <p>Por favor, inserte sus datos</p>
 
 <form id="registro_formulario"> <div class="input-group">
     <span class="icon">👤</span>
-    <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+    <input type="text" name="nombre" placeholder="Nombre y apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten caracteres alfabéticos" required>
   </div>
 
   <div class="input-group">
@@ -68,13 +68,14 @@
 
   <div class="input-group">
     <span class="icon">🔒</span>
-    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$" title="La contraseña debe tener al menos 10 caracteres, una letra mayúscula, un número y un carácter especial" required> 
   </div>
+
 
   <button type="submit" class="btn">registrar →</button>
 </form>
 
-        <script src="../javascript/enlace.js"></script>
+        <script src="../js/enlace.js"></script>
 
         <p class="register-text">
           Ya tengo una cuenta <a href="login.html">Iniciar Sesion</a>
