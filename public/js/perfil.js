@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/perfil/${idEmprendedor}`);
+        const response = await fetch(`/api/perfil/${idEmprendedor}`);
         
         if (response.ok) {
             const datos = await response.json();
@@ -34,7 +34,7 @@ formulario.addEventListener('submit', async (e) => {
 
     try {
         // La URL ahora coincide con tu server.js: /api/emprendedores/:id
-        const response = await fetch('http://localhost:3000/api/emprendedores/' + id, {
+        const response = await fetch('/api/emprendedores/' + id, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ nombre, telefono })
