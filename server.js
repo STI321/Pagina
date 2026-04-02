@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require("mysql2");
 const cors = require('cors');
 const path = require('path');
-
+require('dotenv').config(); // <--- AGREGA ESTA LÍNEA AQUÍ (es vital)
 const app = express();
 
 // --- CONFIGURACIONES ---
