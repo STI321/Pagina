@@ -155,6 +155,14 @@ app.get('/api/perfil/:id', (req, res) => {
     });
 });
 
+// --- RUTA DE INICIO ---
+// Esta ruta le dice al servidor que cuando alguien entre al link principal,
+// le entregue automáticamente el archivo Inicio.html que está en la carpeta pages.
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'pages', 'Inicio.html'));
+});
+
+
 // --- AHORA (Listo para la nube) ---
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
