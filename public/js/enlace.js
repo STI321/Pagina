@@ -7,7 +7,7 @@ formulario.addEventListener('submit', async (e) => {
     const data = Object.fromEntries(formData);
 
     try {
-        const response = await fetch('http://localhost:3000/api/emprendedores', {
+        const response = await fetch('/api/emprendedores', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

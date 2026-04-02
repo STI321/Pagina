@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Cargar datos actuales desde el servidor
-    fetch(`http://localhost:3000/api/emprendedores/${usuarioId}`)
+    fetch(`/api/emprendedores/${usuarioId}`)
         .then(response => {
             if (!response.ok) throw new Error("No se pudo obtener la información");
             return response.json();

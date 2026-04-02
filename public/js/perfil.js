@@ -102,7 +102,7 @@ async function cambiarPassword() {
 
     try {
         // 4. Enviamos la nueva clave a la ruta que acabas de crear en tu server.js
-        const response = await fetch(`http://localhost:3000/api/perfil/password/${id}`, {
+        const response = await fetch(`/api/perfil/password/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password: nuevaPassword })
